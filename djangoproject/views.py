@@ -2,5 +2,5 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("Hello, this is the base page!")
+    return HttpResponse("Front Page Placeholder!")
 
