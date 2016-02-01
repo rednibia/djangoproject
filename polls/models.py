@@ -11,7 +11,8 @@ class Question(models.Model):
     def __str__(self):
         return self.qtxt
     def publishrec(self):
-        return self.pd >= timezone.now() - datetime.timedelta(days=1)
+        now = timezone.now()
+        return now - datetime.timedelta(days=1) <= self.pd <= now
 
 @python_2_unicode_compatible  # only if you need to support Python 2
 class Choice(models.Model):
